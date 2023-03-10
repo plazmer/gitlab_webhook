@@ -1,0 +1,4 @@
+<b>{{ j.get('user_name') }}</b> pushed to <a href="{{ j.get('repository',{}).get('homepage') }}">{{ j.get('project',{}).get('namespace') }}/{{ j.get('project',{}).get('name') }}/</a>
+% for c in j.get('commits', []):  
+- {{ c.get('message').replace("\n", " ").strip() }} <a href="{{ c.get('url') }}">&gt;&gt;&gt;</a>
+% end

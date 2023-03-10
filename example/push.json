@@ -1,0 +1,67 @@
+{
+  "object_kind": "push",
+  "event_name": "push",
+  "before": "acb5f1061a528a37444ac41782bb8c06b4a73f58",
+  "after": "acb5f1061a528a37444ac41782bb8c06b4a73f58",
+  "ref": "refs/heads/main",
+  "checkout_sha": "acb5f1061a528a37444ac41782bb8c06b4a73f58",
+  "message": null,
+  "user_id": 1,
+  "user_name": "Administrator",
+  "user_username": "root",
+  "user_email": null,
+  "user_avatar": "https://secure.gravatar.com/avatar/e64c7d89f26bd1972efa854d13d7dd61?s=80&d=identicon",
+  "project_id": 2,
+  "project": {
+    "id": 2,
+    "name": "firstproject",
+    "description": null,
+    "web_url": "https://192.168.7.46/dvps/firstproject",
+    "avatar_url": null,
+    "git_ssh_url": "git@192.168.7.46:dvps/firstproject.git",
+    "git_http_url": "https://192.168.7.46/dvps/firstproject.git",
+    "namespace": "dvps",
+    "visibility_level": 20,
+    "path_with_namespace": "dvps/firstproject",
+    "default_branch": "main",
+    "ci_config_path": null,
+    "homepage": "https://192.168.7.46/dvps/firstproject",
+    "url": "git@192.168.7.46:dvps/firstproject.git",
+    "ssh_url": "git@192.168.7.46:dvps/firstproject.git",
+    "http_url": "https://192.168.7.46/dvps/firstproject.git"
+  },
+  "commits": [
+    {
+      "id": "acb5f1061a528a37444ac41782bb8c06b4a73f58",
+      "message": "Initial commit",
+      "title": "Initial commit",
+      "timestamp": "2023-02-25T12:53:31+00:00",
+      "url": "https://192.168.7.46/dvps/firstproject/-/commit/acb5f1061a528a37444ac41782bb8c06b4a73f58",
+      "author": {
+        "name": "Administrator",
+        "email": "[REDACTED]"
+      },
+      "added": [
+        "README.md"
+      ],
+      "modified": [
+
+      ],
+      "removed": [
+
+      ]
+    }
+  ],
+  "total_commits_count": 1,
+  "push_options": {
+  },
+  "repository": {
+    "name": "firstproject",
+    "url": "git@192.168.7.46:dvps/firstproject.git",
+    "description": null,
+    "homepage": "https://192.168.7.46/dvps/firstproject",
+    "git_http_url": "https://192.168.7.46/dvps/firstproject.git",
+    "git_ssh_url": "git@192.168.7.46:dvps/firstproject.git",
+    "visibility_level": 20
+  }
+}
