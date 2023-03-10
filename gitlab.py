@@ -1,10 +1,11 @@
 from jinja2 import Environment, FileSystemLoader
+import os
 
-environment = Environment(loader=FileSystemLoader("views/"))
+def router(j, directory = ""):
+    environment = Environment(loader=FileSystemLoader(os.path.join(directory, "views/")))
+    name = j.get("object_kind", "")
 
+    template = environment.get_template(name+".html")
+    response = template.render(j=j)
 
-def router(j):
-    name = j.get('event_name')
-    repo = j.get('project', {}).get('web_url')
-
-    tpl = template(name + '.html', j=j)
+    return response
