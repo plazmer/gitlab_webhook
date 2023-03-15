@@ -1,5 +1,5 @@
-<b>Pipeline</b> in <a href="{{ j.get('repository',{}).get('homepage') }}">{{ j.get('project',{}).get('namespace') }}/{{ j.get('project',{}).get('name') }}/</a> <b>{{ j.get('object_attributes',{}).get('status') }}</b>
-MR: <b>{{ j.get('merge_request',{}).get('title') }}</b>
-Commit: <b>{{ j.get('commit',{}).get('message').replace('\n', ' ') }}</b>
-Stages:{% for c in j.get('builds', []) %}
-- {{ c.get('stage') }} ( {{ c.get('name') }} ) - <b>{{ c.get('status') }}</b>{% endfor %}
+<b>Pipeline</b> in <a href="{{ j.project.web_url }}">{{ j.project.namespace }}/{{ j.project.name }}/</a> <b>{{ j.object_attributes.status }}</b>
+MR: <b>{{ j.merge_request.title }}</b>
+Commit: <b>{{ j.commit.title.replace('\n', ' ') }}</b>
+Stages:{% for c in j.builds %}
+- {{ c.name }} - <b>{{ c.status }}</b>{% endfor %}
