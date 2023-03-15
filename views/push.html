@@ -1,3 +1,3 @@
-<b>Push:</b> {{ j.user_name }}</b> to <a href="{{ j.get('repository',{}).get('homepage') }}">{{ j.get('project',{}).get('namespace') }}/{{ j.get('project',{}).get('name') }}/</a>
+<b>Push:</b> <b>{{ j.user_name }}</b> to <a href="{{ j.get('repository',{}).get('homepage') }}">{{ j.get('project',{}).get('namespace') }}/{{ j.get('project',{}).get('name') }}/</a>
 Commits:{% for c in j.get('commits', []) %}
 - {{ c.get('message').replace("\n", " ").strip() }} <a href="{{ c.get('url') }}">&gt;&gt;&gt;</a>{% endfor %}
