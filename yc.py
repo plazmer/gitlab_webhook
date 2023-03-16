@@ -19,7 +19,7 @@ def handler(event, context):
         repo = body.get('project', {}).get('web_url')
 
         tpl = gitlab.router(body)
-        for tg_id in db.settings.get(repo, []):
+        for tg_id in db.get(repo, body.get("object_kind")):
             tg.send_message(tg_id, tpl, 'HTML')
 
     return {

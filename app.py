@@ -1,7 +1,8 @@
 import json
-
+import db
+import gitlab
+import tg
 from bottle import get, post, request, run
-import tg, db, gitlab
 
 
 @get("/")
@@ -15,11 +16,11 @@ def gitlab_post():
     if not j:
         return "error"
 
-    repo = j.get('project',{}).get('web_url')
+    repo = j.get('project', {}).get('web_url')
 
     tpl = gitlab.router(j)
 
-    for tg_id in db.settings.get(repo, []):
+    for tg_id in db.get(repo, j.get("object_kind")):
         tg.send_message(tg_id, tpl, 'HTML')
     return "Ok"
 
@@ -27,12 +28,12 @@ def gitlab_post():
 @get("/gitlab_test")
 def gitlab_test():
     ev = request.query["event"]
-    with open("tests/"+ev+".json", "r") as f:
+    with open("tests/" + ev + ".json", "r") as f:
         j = json.load(f)
         if not j:
             return "error"
 
-    tpl = gitlab.router(j).replace('\n','<br/>\n')
+    tpl = gitlab.router(j).replace('\n', '<br/>\n')
     return tpl
 
 

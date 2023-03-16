@@ -1,8 +1,5 @@
-repo	email	tg_id
-http://git.starkovgrp.local/rmk-147/work	prisyazhnyj@starkovgrp.ru	157215168
-http://git.starkovgrp.local/spk-150/work	prisyazhnyj@starkovgrp.ru	157215168
-http://git.starkovgrp.local/spk-150/work	solovjov@starkovgrp.ru	241077668
-http://git.starkovgrp.local/spk-150/work	a.goncharova@starkovgrp.ru	472907459
-http://git.starkovgrp.local/rmk-147/work	a.goncharova@starkovgrp.ru	472907459
-
-
+repo	email	tg_id	message_type
+*	prisyazhnyj@starkovgrp.ru	157215168	*
+http://git.starkovgrp.local/spk-150/work	solovjov@starkovgrp.ru	241077668	pipeline
+http://git.starkovgrp.local/spk-150/work	a.goncharova@starkovgrp.ru	472907459	pipeline
+http://git.starkovgrp.local/rmk-147/work	a.goncharova@starkovgrp.ru	472907459	pipeline
